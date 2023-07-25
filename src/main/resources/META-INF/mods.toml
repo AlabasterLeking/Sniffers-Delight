@@ -8,7 +8,7 @@ modId="sniffersdelight"
 
 version="1.0.0"
 displayName="Sniffer's Delight"
-logoFile="sniffersdelight-final.png"
+logoFile="sniffersdelightbanner.png"
 credits="Thank you to vectorwing for creating Farmer's Delight!"
 authors="Alabaster Leking"
 description='''A maritime addon for Farmer's Delight'''
