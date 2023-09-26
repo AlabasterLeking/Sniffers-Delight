@@ -3,7 +3,6 @@ package alabaster.sniffersdelight.data;
 import net.minecraft.data.DataGenerator;
 import net.minecraft.data.tags.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
-import alabaster.sniffersdelight.common.registry.ModBlocks;
 
 import javax.annotation.Nullable;
 
