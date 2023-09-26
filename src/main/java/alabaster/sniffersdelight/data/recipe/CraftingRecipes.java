@@ -1,14 +1,7 @@
 package alabaster.sniffersdelight.data.recipe;
 
-import alabaster.sniffersdelight.SniffersDelight;
-import alabaster.sniffersdelight.common.tags.CDModTags;
-import net.minecraft.advancements.critereon.InventoryChangeTrigger;
 import net.minecraft.data.recipes.*;
-import net.minecraft.resources.ResourceLocation;
-import net.minecraft.world.item.Items;
-import alabaster.sniffersdelight.common.registry.ModItems;
 import vectorwing.farmersdelight.common.registry.ModRecipeSerializers;
-import vectorwing.farmersdelight.common.tag.ForgeTags;
 
 import java.util.function.Consumer;
 

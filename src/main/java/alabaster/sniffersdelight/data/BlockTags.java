@@ -1,23 +1,23 @@
 package alabaster.sniffersdelight.data;
 
-import net.minecraft.data.DataGenerator;
-import net.minecraft.data.tags.BlockTagsProvider;
+import alabaster.sniffersdelight.SniffersDelight;
+import alabaster.sniffersdelight.common.registry.ModBlocks;
+import net.minecraft.core.HolderLookup;
+import net.minecraft.data.PackOutput;
+import net.minecraftforge.common.data.BlockTagsProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 
 import javax.annotation.Nullable;
+import java.util.concurrent.CompletableFuture;
 
-public class BlockTags extends BlockTagsProvider {
-    public BlockTags(DataGenerator generatorIn, String modId, @Nullable ExistingFileHelper existingFileHelper) {
-        super(generatorIn, modId, existingFileHelper);
+public class BlockTags extends BlockTagsProvider
+{
+    public BlockTags(PackOutput output, CompletableFuture<HolderLookup.Provider> lookupProvider, @Nullable ExistingFileHelper existingFileHelper) {
+        super(output, lookupProvider, SniffersDelight.MODID, existingFileHelper);
     }
 
     @Override
-    protected void addTags() {
-        this.registerBlockMineables();
-    }
-
-    protected void registerBlockMineables() {
-        tag(net.minecraft.tags.BlockTags.MINEABLE_WITH_AXE).add(
+    protected void addTags(HolderLookup.Provider provider) {
 
     }
 }

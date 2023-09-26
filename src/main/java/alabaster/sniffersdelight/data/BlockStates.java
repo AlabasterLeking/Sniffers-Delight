@@ -2,6 +2,7 @@ package alabaster.sniffersdelight.data;
 
 import alabaster.sniffersdelight.SniffersDelight;
 import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.client.model.generators.BlockStateProvider;
@@ -9,12 +10,13 @@ import net.minecraftforge.client.model.generators.ModelFile;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
 import alabaster.sniffersdelight.common.registry.ModBlocks;
+import alabaster.sniffersdelight.common.registry.ModItems;
 
 public class BlockStates extends BlockStateProvider {
     private static final int DEFAULT_ANGLE_OFFSET = 180;
 
-    public BlockStates(DataGenerator gen, ExistingFileHelper exFileHelper) {
-        super(gen, SniffersDelight.MODID, exFileHelper);
+    public BlockStates(PackOutput output, ExistingFileHelper existingFileHelper) {
+        super(output, SniffersDelight.MODID, existingFileHelper);
     }
 
     private String blockName(Block block) {
@@ -35,6 +37,7 @@ public class BlockStates extends BlockStateProvider {
 
     @Override
     protected void registerStatesAndModels() {
+
 
     }
 

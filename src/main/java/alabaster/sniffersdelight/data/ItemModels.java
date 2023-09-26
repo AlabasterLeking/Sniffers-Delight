@@ -2,13 +2,15 @@ package alabaster.sniffersdelight.data;
 
 import alabaster.sniffersdelight.SniffersDelight;
 import com.google.common.collect.Sets;
-import net.minecraft.data.DataGenerator;
+import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
+import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
+import alabaster.sniffersdelight.common.registry.ModItems;
 
 import java.util.*;
 import java.util.function.Predicate;
@@ -19,8 +21,8 @@ public class ItemModels extends ItemModelProvider
     public static final String GENERATED = "item/generated";
     public static final String HANDHELD = "item/handheld";
 
-    public ItemModels(DataGenerator generator, ExistingFileHelper existingFileHelper) {
-        super(generator, SniffersDelight.MODID, existingFileHelper);
+    public ItemModels(PackOutput output, ExistingFileHelper existingFileHelper) {
+        super(output, SniffersDelight.MODID, existingFileHelper);
     }
 
     @Override
@@ -28,15 +30,15 @@ public class ItemModels extends ItemModelProvider
         Set<Item> items = ForgeRegistries.ITEMS.getValues().stream().filter(i -> SniffersDelight.MODID.equals(ForgeRegistries.ITEMS.getKey(i).getNamespace()))
                 .collect(Collectors.toSet());
 
-        // Blocks whose items look alike
+        // Blocks whose item look alike
         takeAll(items, i -> i instanceof BlockItem).forEach(item -> blockBasedModel(item, ""));
 
-        // Handheld items
+        // Handheld item
         Set<Item> handheldItems = Sets.newHashSet(
         );
         takeAll(items, handheldItems.toArray(new Item[0])).forEach(item -> itemHandheldModel(item, resourceItem(itemName(item))));
 
-        // Generated items
+        // Generated item
         items.forEach(item -> itemGeneratedModel(item, resourceItem(itemName(item))));
     }
 
@@ -61,7 +63,7 @@ public class ItemModels extends ItemModelProvider
     }
 
     public ResourceLocation resourceItem(String path) {
-        return new ResourceLocation(SniffersDelight.MODID, "items/" + path);
+        return new ResourceLocation(SniffersDelight.MODID, "item/" + path);
     }
 
     @SafeVarargs

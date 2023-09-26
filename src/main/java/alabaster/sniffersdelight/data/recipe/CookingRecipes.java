@@ -1,16 +1,8 @@
 package alabaster.sniffersdelight.data.recipe;
 
-import alabaster.sniffersdelight.common.tags.CDModTags;
 import net.minecraft.data.recipes.FinishedRecipe;
-import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.Ingredient;
-import vectorwing.farmersdelight.data.builder.CookingPotRecipeBuilder;
-import vectorwing.farmersdelight.client.recipebook.CookingPotRecipeBookTab;
-import alabaster.sniffersdelight.common.registry.ModItems;
-import vectorwing.farmersdelight.common.tag.ForgeTags;
 
 import java.util.function.Consumer;
-import java.util.stream.Stream;
 
 public class CookingRecipes {
     public static final int FAST_COOKING = 100;      // 5 seconds
