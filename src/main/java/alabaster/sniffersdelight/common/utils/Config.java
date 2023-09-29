@@ -1,4 +1,4 @@
-package alabaster.sniffersdelight.common;
+package alabaster.sniffersdelight.common.utils;
 
 import net.minecraftforge.common.ForgeConfigSpec;
 import net.minecraftforge.fml.common.Mod;

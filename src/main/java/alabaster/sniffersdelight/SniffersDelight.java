@@ -1,6 +1,6 @@
 package alabaster.sniffersdelight;
 
-import alabaster.sniffersdelight.common.Config;
+import alabaster.sniffersdelight.common.utils.Config;
 import alabaster.sniffersdelight.common.registry.ModBlocks;
 import alabaster.sniffersdelight.common.registry.ModCreativeTabs;
 import alabaster.sniffersdelight.common.registry.ModItems;
@@ -28,7 +28,7 @@ import java.util.concurrent.CompletableFuture;
 
 @Mod(SniffersDelight.MODID)
 public class SniffersDelight {
-    public static final String MODID = "crabbersdelight";
+    public static final String MODID = "sniffersdelight";
     public static final Logger LOGGER = LogManager.getLogger();
 
     public SniffersDelight() {

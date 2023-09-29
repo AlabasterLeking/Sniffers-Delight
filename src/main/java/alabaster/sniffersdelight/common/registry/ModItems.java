@@ -33,11 +33,9 @@ public class ModItems {
     }
 
     // Materials
-    public static final RegistryObject<Item> PEARL = addToTab(ITEMS.register("pearl",
-            () -> new Item(basicItem())));
 
     // Foods
-    public static final RegistryObject<Item> RAW_CRAB = addToTab(ITEMS.register("crab",
+    public static final RegistryObject<Item> FRIED_SNIFFER_EGG = addToTab(ITEMS.register("fried_sniffer_egg",
             () -> new Item(foodItem(SDFoodValues.FRIED_SNIFFER_EGG))));
 
 }
