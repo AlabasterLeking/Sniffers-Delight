@@ -13,5 +13,11 @@ public class SDFoodValues {
     // Food Items
 
     public static final FoodProperties FRIED_SNIFFER_EGG = (new FoodProperties.Builder())
-            .nutrition(4).saturationMod(0.8f).meat().fast().build();
+            .nutrition(4).saturationMod(0.8f).build();
+
+    public static final FoodProperties SNIFFER_MOSS = (new FoodProperties.Builder())
+            .nutrition(4).saturationMod(0.8f).build();
+
+    public static final FoodProperties GREEN_EGGS_AND_HAM = (new FoodProperties.Builder())
+            .nutrition(4).saturationMod(0.8f).build();
 }

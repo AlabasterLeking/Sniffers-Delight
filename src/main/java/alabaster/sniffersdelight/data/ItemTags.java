@@ -1,6 +1,5 @@
 package alabaster.sniffersdelight.data;
 
-
 import alabaster.sniffersdelight.SniffersDelight;
 import alabaster.sniffersdelight.common.registry.ModItems;
 import alabaster.sniffersdelight.common.tags.SDModTags;
@@ -11,6 +10,7 @@ import net.minecraft.data.tags.TagsProvider;
 import net.minecraft.world.item.Items;
 import net.minecraft.world.level.block.Block;
 import net.minecraftforge.common.data.ExistingFileHelper;
+import net.minecraftforge.fml.common.Mod;
 import vectorwing.farmersdelight.common.tag.ForgeTags;
 
 import javax.annotation.Nullable;
@@ -23,6 +23,7 @@ public class ItemTags extends ItemTagsProvider {
 
     @Override
     protected void addTags(HolderLookup.Provider provider) {
+        tag(net.minecraft.tags.ItemTags.DECORATED_POT_SHERDS).add(ModItems.CHEF_POTTERY_SHERD.get());
 
         this.registerModTags();
     }
