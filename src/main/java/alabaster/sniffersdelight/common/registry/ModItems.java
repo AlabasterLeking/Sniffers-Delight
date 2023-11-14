@@ -6,13 +6,9 @@ import net.minecraft.world.food.FoodProperties;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.item.Items;
-import net.minecraft.world.item.crafting.DecoratedPotRecipe;
-import net.minecraft.world.level.block.entity.DecoratedPotPatterns;
-import net.minecraftforge.common.ForgeSpawnEggItem;
 import net.minecraftforge.registries.DeferredRegister;
 import net.minecraftforge.registries.ForgeRegistries;
 import net.minecraftforge.registries.RegistryObject;
-import vectorwing.farmersdelight.common.item.DrinkableItem;
 
 import static alabaster.sniffersdelight.common.registry.ModCreativeTabs.addToTab;
 
@@ -35,11 +31,7 @@ public class ModItems {
     }
 
     // Materials
-
     public static final RegistryObject<Item> CHEF_POTTERY_SHERD = addToTab(ITEMS.register("chef_pottery_sherd",
-            () -> new Item(basicItem())));
-
-    public static final RegistryObject<Item> LADLE = addToTab(ITEMS.register("ladle",
             () -> new Item(basicItem())));
 
     // Foods
@@ -52,4 +44,7 @@ public class ModItems {
     public static final RegistryObject<Item> GREEN_EGGS_AND_HAM = addToTab(ITEMS.register("green_eggs_and_ham",
             () -> new Item(foodItem(SDFoodValues.GREEN_EGGS_AND_HAM))));
 
+    // Storage Blocks
+    public static final RegistryObject<Item> MEAT_BLOCK = addToTab(ITEMS.register("meat_block",
+            () -> new BlockItem(ModBlocks.MEAT_BLOCK.get(), basicItem())));
 }

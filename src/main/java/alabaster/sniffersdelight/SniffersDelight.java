@@ -1,5 +1,6 @@
 package alabaster.sniffersdelight;
 
+import alabaster.sniffersdelight.common.registry.ModBlockEntity;
 import alabaster.sniffersdelight.common.utils.Config;
 import alabaster.sniffersdelight.common.registry.ModBlocks;
 import alabaster.sniffersdelight.common.registry.ModCreativeTabs;
@@ -38,6 +39,7 @@ public class SniffersDelight {
 
         ModItems.ITEMS.register(bus);
         ModBlocks.BLOCKS.register(bus);
+        ModBlockEntity.BLOCK_ENTITY_TYPE.register(bus);
         ModCreativeTabs.CREATIVE_TAB.register(bus);
 
         MinecraftForge.EVENT_BUS.register(this);

@@ -1,6 +1,10 @@
 package alabaster.sniffersdelight.data.recipe;
 
+import alabaster.sniffersdelight.common.registry.ModItems;
 import net.minecraft.data.recipes.FinishedRecipe;
+import net.minecraft.world.item.Items;
+import vectorwing.farmersdelight.client.recipebook.CookingPotRecipeBookTab;
+import vectorwing.farmersdelight.data.builder.CookingPotRecipeBuilder;
 
 import java.util.function.Consumer;
 
@@ -20,7 +24,18 @@ public class CookingRecipes {
     }
 
     private static void cookMeals(Consumer<FinishedRecipe> consumer) {
+        CookingPotRecipeBuilder.cookingPotRecipe(ModItems.FRIED_SNIFFER_EGG.get(), 4, NORMAL_COOKING, SMALL_EXP)
+                .addIngredient(Items.SNIFFER_EGG)
+                .unlockedByAnyIngredient(Items.SNIFFER_EGG)
+                .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
+                .build(consumer);
 
+        CookingPotRecipeBuilder.cookingPotRecipe(ModItems.GREEN_EGGS_AND_HAM.get(), 1, NORMAL_COOKING, MEDIUM_EXP)
+                .addIngredient(ModItems.FRIED_SNIFFER_EGG.get())
+                .addIngredient(Items.COOKED_PORKCHOP)
+                .unlockedByAnyIngredient(ModItems.FRIED_SNIFFER_EGG.get(), Items.COOKED_PORKCHOP)
+                .setRecipeBookTab(CookingPotRecipeBookTab.MEALS)
+                .build(consumer);
     }
 
     private static void cookMinecraftSoups(Consumer<FinishedRecipe> consumer) {

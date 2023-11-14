@@ -1,0 +1,30 @@
+{
+  "variants": {
+    "facing=down": {
+      "model": "sniffersdelight:block/meat_block",
+      "x": 180
+    },
+    "facing=east": {
+      "model": "sniffersdelight:block/meat_block",
+      "x": 90,
+      "y": 90
+    },
+    "facing=north": {
+      "model": "sniffersdelight:block/meat_block",
+      "x": 90
+    },
+    "facing=south": {
+      "model": "sniffersdelight:block/meat_block",
+      "x": 90,
+      "y": 180
+    },
+    "facing=up": {
+      "model": "sniffersdelight:block/meat_block"
+    },
+    "facing=west": {
+      "model": "sniffersdelight:block/meat_block",
+      "x": 90,
+      "y": 270
+    }
+  }
+}

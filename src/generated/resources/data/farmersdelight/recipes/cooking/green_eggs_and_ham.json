@@ -1,0 +1,17 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 1.0,
+  "ingredients": [
+    {
+      "item": "sniffersdelight:fried_sniffer_egg"
+    },
+    {
+      "item": "minecraft:cooked_porkchop"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "item": "sniffersdelight:green_eggs_and_ham"
+  }
+}

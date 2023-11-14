@@ -1,0 +1,36 @@
+{
+  "parent": "minecraft:recipes/root",
+  "criteria": {
+    "has_any_ingredient": {
+      "conditions": {
+        "items": [
+          {
+            "items": [
+              "sniffersdelight:fried_sniffer_egg",
+              "minecraft:cooked_porkchop"
+            ]
+          }
+        ]
+      },
+      "trigger": "minecraft:inventory_changed"
+    },
+    "has_the_recipe": {
+      "conditions": {
+        "recipe": "farmersdelight:cooking/green_eggs_and_ham"
+      },
+      "trigger": "minecraft:recipe_unlocked"
+    }
+  },
+  "requirements": [
+    [
+      "has_any_ingredient",
+      "has_the_recipe"
+    ]
+  ],
+  "rewards": {
+    "recipes": [
+      "farmersdelight:cooking/green_eggs_and_ham"
+    ]
+  },
+  "sends_telemetry_event": true
+}

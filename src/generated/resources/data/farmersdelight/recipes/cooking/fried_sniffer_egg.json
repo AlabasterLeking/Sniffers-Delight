@@ -1,0 +1,15 @@
+{
+  "type": "farmersdelight:cooking",
+  "cookingtime": 200,
+  "experience": 0.35,
+  "ingredients": [
+    {
+      "item": "minecraft:sniffer_egg"
+    }
+  ],
+  "recipe_book_tab": "meals",
+  "result": {
+    "count": 4,
+    "item": "sniffersdelight:fried_sniffer_egg"
+  }
+}
