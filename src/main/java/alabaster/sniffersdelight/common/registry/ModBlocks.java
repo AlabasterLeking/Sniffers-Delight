@@ -17,4 +17,7 @@ public class ModBlocks {
     public static final RegistryObject<Block> MEAT_BLOCK = BLOCKS.register("meat_block",
             () -> new MeatBlock(Block.Properties.copy(Blocks.NETHER_WART_BLOCK).strength(2.0F, 3.0F).sound(SoundType.SLIME_BLOCK)));
 
+    public static final RegistryObject<Block> COOKED_MEAT_BLOCK = BLOCKS.register("cooked_meat_block",
+            () -> new MeatBlock(Block.Properties.copy(Blocks.NETHER_WART_BLOCK).strength(2.0F, 3.0F).sound(SoundType.SLIME_BLOCK)));
+
 }

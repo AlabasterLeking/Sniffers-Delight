@@ -47,4 +47,7 @@ public class ModItems {
     // Storage Blocks
     public static final RegistryObject<Item> MEAT_BLOCK = addToTab(ITEMS.register("meat_block",
             () -> new BlockItem(ModBlocks.MEAT_BLOCK.get(), basicItem())));
+
+    public static final RegistryObject<Item> COOKED_MEAT_BLOCK = addToTab(ITEMS.register("cooked_meat_block",
+            () -> new BlockItem(ModBlocks.COOKED_MEAT_BLOCK.get(), basicItem())));
 }

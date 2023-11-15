@@ -1,9 +1,9 @@
 {
 	"textures": {
-		"side": "sniffersdelight:block/meat_block_side",
-		"end": "sniffersdelight:block/meat_block_end",
+		"side": "sniffersdelight:block/cooked_meat_block_side",
+		"end": "sniffersdelight:block/cooked_meat_block_end",
 		"accent": "sniffersdelight:block/bone_accent",
-		"particle": "sniffersdelight:block/meat_block_end"
+		"particle": "sniffersdelight:block/cooked_meat_block_end"
 	},
 	"render_type": "minecraft:cutout",
 	"elements": [
