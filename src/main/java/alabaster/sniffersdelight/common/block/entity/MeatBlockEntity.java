@@ -1,6 +1,7 @@
 package alabaster.sniffersdelight.common.block.entity;
 
 import alabaster.sniffersdelight.Config;
+import alabaster.sniffersdelight.SniffersDelight;
 import alabaster.sniffersdelight.common.registry.ModBlockEntity;
 import alabaster.sniffersdelight.common.registry.ModBlocks;
 import com.mojang.datafixers.util.Pair;
@@ -57,7 +58,7 @@ public class MeatBlockEntity extends BlockEntity implements HeatableBlockEntity 
             if (meatBlockEntity.tickCounter >= random.nextIntBetweenInclusive(getMinMax().getFirst(), getMinMax().getSecond())) {
                 meatBlockEntity.tickCounter = 0;
                 if (meatBlockEntity.isHeated()) {
-                    level.setBlock(pos, ModBlocks.COOKED_MEAT_BLOCK.get().defaultBlockState(), 3);
+                    level.setBlock(pos, ModBlocks.COOKED_MEAT_BLOCK.get().withPropertiesOf(meatBlockEntity.getBlockState()), 3);
                 }
             } else {
                 meatBlockEntity.tickCounter++;
