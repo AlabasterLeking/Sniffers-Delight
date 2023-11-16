@@ -1,27 +1,131 @@
 {
   "variants": {
-    "facing=down": {
+    "facing=down,servings=0": {
+      "model": "sniffersdelight:block/cooked_meat_block_stage4",
+      "x": 180
+    },
+    "facing=down,servings=1": {
+      "model": "sniffersdelight:block/cooked_meat_block_stage3",
+      "x": 180
+    },
+    "facing=down,servings=2": {
+      "model": "sniffersdelight:block/cooked_meat_block_stage2",
+      "x": 180
+    },
+    "facing=down,servings=3": {
+      "model": "sniffersdelight:block/cooked_meat_block_stage1",
+      "x": 180
+    },
+    "facing=down,servings=4": {
       "model": "sniffersdelight:block/cooked_meat_block",
       "x": 180
     },
-    "facing=east": {
+    "facing=east,servings=0": {
+      "model": "sniffersdelight:block/cooked_meat_block_stage4",
+      "x": 90,
+      "y": 90
+    },
+    "facing=east,servings=1": {
+      "model": "sniffersdelight:block/cooked_meat_block_stage3",
+      "x": 90,
+      "y": 90
+    },
+    "facing=east,servings=2": {
+      "model": "sniffersdelight:block/cooked_meat_block_stage2",
+      "x": 90,
+      "y": 90
+    },
+    "facing=east,servings=3": {
+      "model": "sniffersdelight:block/cooked_meat_block_stage1",
+      "x": 90,
+      "y": 90
+    },
+    "facing=east,servings=4": {
       "model": "sniffersdelight:block/cooked_meat_block",
       "x": 90,
       "y": 90
     },
-    "facing=north": {
+    "facing=north,servings=0": {
+      "model": "sniffersdelight:block/cooked_meat_block_stage4",
+      "x": 90
+    },
+    "facing=north,servings=1": {
+      "model": "sniffersdelight:block/cooked_meat_block_stage3",
+      "x": 90
+    },
+    "facing=north,servings=2": {
+      "model": "sniffersdelight:block/cooked_meat_block_stage2",
+      "x": 90
+    },
+    "facing=north,servings=3": {
+      "model": "sniffersdelight:block/cooked_meat_block_stage1",
+      "x": 90
+    },
+    "facing=north,servings=4": {
       "model": "sniffersdelight:block/cooked_meat_block",
       "x": 90
     },
-    "facing=south": {
+    "facing=south,servings=0": {
+      "model": "sniffersdelight:block/cooked_meat_block_stage4",
+      "x": 90,
+      "y": 180
+    },
+    "facing=south,servings=1": {
+      "model": "sniffersdelight:block/cooked_meat_block_stage3",
+      "x": 90,
+      "y": 180
+    },
+    "facing=south,servings=2": {
+      "model": "sniffersdelight:block/cooked_meat_block_stage2",
+      "x": 90,
+      "y": 180
+    },
+    "facing=south,servings=3": {
+      "model": "sniffersdelight:block/cooked_meat_block_stage1",
+      "x": 90,
+      "y": 180
+    },
+    "facing=south,servings=4": {
       "model": "sniffersdelight:block/cooked_meat_block",
       "x": 90,
       "y": 180
     },
-    "facing=up": {
+    "facing=up,servings=0": {
+      "model": "sniffersdelight:block/cooked_meat_block_stage4"
+    },
+    "facing=up,servings=1": {
+      "model": "sniffersdelight:block/cooked_meat_block_stage3"
+    },
+    "facing=up,servings=2": {
+      "model": "sniffersdelight:block/cooked_meat_block_stage2"
+    },
+    "facing=up,servings=3": {
+      "model": "sniffersdelight:block/cooked_meat_block_stage1"
+    },
+    "facing=up,servings=4": {
       "model": "sniffersdelight:block/cooked_meat_block"
     },
-    "facing=west": {
+    "facing=west,servings=0": {
+      "model": "sniffersdelight:block/cooked_meat_block_stage4",
+      "x": 90,
+      "y": 270
+    },
+    "facing=west,servings=1": {
+      "model": "sniffersdelight:block/cooked_meat_block_stage3",
+      "x": 90,
+      "y": 270
+    },
+    "facing=west,servings=2": {
+      "model": "sniffersdelight:block/cooked_meat_block_stage2",
+      "x": 90,
+      "y": 270
+    },
+    "facing=west,servings=3": {
+      "model": "sniffersdelight:block/cooked_meat_block_stage1",
+      "x": 90,
+      "y": 270
+    },
+    "facing=west,servings=4": {
       "model": "sniffersdelight:block/cooked_meat_block",
       "x": 90,
       "y": 270

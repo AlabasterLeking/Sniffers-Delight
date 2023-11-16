@@ -1,6 +1,7 @@
 package alabaster.sniffersdelight.common.registry;
 
 import alabaster.sniffersdelight.SniffersDelight;
+import alabaster.sniffersdelight.common.block.CookedMeatBlock;
 import alabaster.sniffersdelight.common.block.MeatBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -18,6 +19,6 @@ public class ModBlocks {
             () -> new MeatBlock(Block.Properties.copy(Blocks.NETHER_WART_BLOCK).strength(2.0F, 3.0F).sound(SoundType.SLIME_BLOCK)));
 
     public static final RegistryObject<Block> COOKED_MEAT_BLOCK = BLOCKS.register("cooked_meat_block",
-            () -> new MeatBlock(Block.Properties.copy(Blocks.NETHER_WART_BLOCK).strength(2.0F, 3.0F).sound(SoundType.SLIME_BLOCK)));
+            () -> new CookedMeatBlock(Block.Properties.copy(Blocks.NETHER_WART_BLOCK), ModItems.COOKED_MEAT_BLOCK, true));
 
 }
