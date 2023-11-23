@@ -6,11 +6,10 @@ import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
-import net.minecraftforge.client.model.generators.ItemModelBuilder;
 import net.minecraftforge.client.model.generators.ItemModelProvider;
 import net.minecraftforge.common.data.ExistingFileHelper;
 import net.minecraftforge.registries.ForgeRegistries;
-import alabaster.sniffersdelight.common.registry.ModItems;
+
 
 import java.util.*;
 import java.util.function.Predicate;
@@ -20,6 +19,7 @@ public class ItemModels extends ItemModelProvider
 {
     public static final String GENERATED = "item/generated";
     public static final String HANDHELD = "item/handheld";
+    public static final ResourceLocation MUG = new ResourceLocation(SniffersDelight.MODID, "item/mug");
 
     public ItemModels(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, SniffersDelight.MODID, existingFileHelper);
@@ -30,15 +30,27 @@ public class ItemModels extends ItemModelProvider
         Set<Item> items = ForgeRegistries.ITEMS.getValues().stream().filter(i -> SniffersDelight.MODID.equals(ForgeRegistries.ITEMS.getKey(i).getNamespace()))
                 .collect(Collectors.toSet());
 
-        // Blocks whose item look alike
+
+        // Blocks with special item sprites
+        Set<Item> spriteBlockItems = Sets.newHashSet(
+        );
+        takeAll(items, spriteBlockItems.toArray(new Item[0])).forEach(item -> withExistingParent(itemName(item), GENERATED).texture("layer0", resourceItem(itemName(item))));
+
+        // Blocks with flat block textures for their items
+        Set<Item> flatBlockItems = Sets.newHashSet(
+
+        );
+        takeAll(items, flatBlockItems.toArray(new Item[0])).forEach(item -> itemGeneratedModel(item, resourceBlock(itemName(item))));
+
+        // Blocks whose items look alike
         takeAll(items, i -> i instanceof BlockItem).forEach(item -> blockBasedModel(item, ""));
 
-        // Handheld item
+        // Handheld items
         Set<Item> handheldItems = Sets.newHashSet(
         );
         takeAll(items, handheldItems.toArray(new Item[0])).forEach(item -> itemHandheldModel(item, resourceItem(itemName(item))));
 
-        // Generated item
+        // Generated items
         items.forEach(item -> itemGeneratedModel(item, resourceItem(itemName(item))));
     }
 

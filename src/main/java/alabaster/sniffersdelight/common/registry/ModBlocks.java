@@ -2,6 +2,7 @@ package alabaster.sniffersdelight.common.registry;
 
 import alabaster.sniffersdelight.SniffersDelight;
 import alabaster.sniffersdelight.common.block.CookedMeatBlock;
+import alabaster.sniffersdelight.common.block.FrostbloomBlock;
 import alabaster.sniffersdelight.common.block.MeatBlock;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
@@ -21,4 +22,10 @@ public class ModBlocks {
     public static final RegistryObject<Block> COOKED_MEAT_BLOCK = BLOCKS.register("cooked_meat_block",
             () -> new CookedMeatBlock(Block.Properties.copy(Blocks.NETHER_WART_BLOCK), ModItems.COOKED_MEAT_BLOCK, true));
 
+    // Crops
+    public static final RegistryObject<Block> FROSTBLOOM_BLOCK = BLOCKS.register("frostbloom",
+            () -> new FrostbloomBlock(Block.Properties.copy(Blocks.POPPY)));
+
+//    public static final RegistryObject<Block> IRONSHROOM_BLOCK = BLOCKS.register("ironshroom",
+//            () -> new IronShroomBlock(Block.Properties.copy(Blocks.RED_MUSHROOM)));
 }
