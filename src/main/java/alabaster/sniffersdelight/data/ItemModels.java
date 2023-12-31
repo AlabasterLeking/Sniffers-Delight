@@ -1,6 +1,7 @@
 package alabaster.sniffersdelight.data;
 
 import alabaster.sniffersdelight.SniffersDelight;
+import alabaster.sniffersdelight.common.registry.ModItems;
 import com.google.common.collect.Sets;
 import net.minecraft.data.PackOutput;
 import net.minecraft.resources.ResourceLocation;
@@ -19,7 +20,6 @@ public class ItemModels extends ItemModelProvider
 {
     public static final String GENERATED = "item/generated";
     public static final String HANDHELD = "item/handheld";
-    public static final ResourceLocation MUG = new ResourceLocation(SniffersDelight.MODID, "item/mug");
 
     public ItemModels(PackOutput output, ExistingFileHelper existingFileHelper) {
         super(output, SniffersDelight.MODID, existingFileHelper);
@@ -30,9 +30,9 @@ public class ItemModels extends ItemModelProvider
         Set<Item> items = ForgeRegistries.ITEMS.getValues().stream().filter(i -> SniffersDelight.MODID.equals(ForgeRegistries.ITEMS.getKey(i).getNamespace()))
                 .collect(Collectors.toSet());
 
-
         // Blocks with special item sprites
         Set<Item> spriteBlockItems = Sets.newHashSet(
+                ModItems.FROSTBLOOM_SEEDS.get()
         );
         takeAll(items, spriteBlockItems.toArray(new Item[0])).forEach(item -> withExistingParent(itemName(item), GENERATED).texture("layer0", resourceItem(itemName(item))));
 

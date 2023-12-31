@@ -3,7 +3,9 @@ package alabaster.sniffersdelight.common.registry;
 import alabaster.sniffersdelight.SniffersDelight;
 import alabaster.sniffersdelight.common.block.CookedMeatBlock;
 import alabaster.sniffersdelight.common.block.FrostbloomBlock;
+import alabaster.sniffersdelight.common.block.FrostbloomFlowerBlock;
 import alabaster.sniffersdelight.common.block.MeatBlock;
+import net.minecraft.world.effect.MobEffects;
 import net.minecraft.world.level.block.Block;
 import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.SoundType;
@@ -23,8 +25,11 @@ public class ModBlocks {
             () -> new CookedMeatBlock(Block.Properties.copy(Blocks.NETHER_WART_BLOCK), ModItems.COOKED_MEAT_BLOCK, true));
 
     // Crops
-    public static final RegistryObject<Block> FROSTBLOOM_BLOCK = BLOCKS.register("frostbloom",
+    public static final RegistryObject<Block> FROSTBLOOM_CROP = BLOCKS.register("frostblooms",
             () -> new FrostbloomBlock(Block.Properties.copy(Blocks.POPPY)));
+
+    public static final RegistryObject<Block> FROSTBLOOM = BLOCKS.register("frostbloom",
+            () -> new FrostbloomFlowerBlock(MobEffects.FIRE_RESISTANCE, 8, Block.Properties.copy(Blocks.POPPY)));
 
 //    public static final RegistryObject<Block> IRONSHROOM_BLOCK = BLOCKS.register("ironshroom",
 //            () -> new IronShroomBlock(Block.Properties.copy(Blocks.RED_MUSHROOM)));
